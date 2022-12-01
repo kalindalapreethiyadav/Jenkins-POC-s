@@ -9,7 +9,6 @@ pipeline
                 echo "building the code"
             }
         }
-
         stage("test")
         {
             steps{
