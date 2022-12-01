@@ -1,0 +1,17 @@
+pipeline 
+{
+    environment{
+        ENV = "DEV"
+    }
+    stages {
+        stage("checking")
+        {
+            steps{
+                script{      
+                num = "preethi"
+                }
+                echo "printing my name $num"
+            }
+        }
+    }
+}
