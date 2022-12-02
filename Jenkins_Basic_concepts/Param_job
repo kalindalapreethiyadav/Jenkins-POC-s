@@ -10,24 +10,59 @@ pipeline
         booleanParam(name:'Toggle', defaultValue:true, description:'Toggle the Value')
    }
 
-    stages("Testing")
+    stages
     {
-        stage("build")
+        stage('String')
         {
             steps{
-                echo "building the code"
+                echo "String $NAME"
             }
         }
-        stage("test")
+        stage('text')
         {
             steps{
-                echo "testing the code"
+                echo "Text $Role"
             }
         }
-        stage("upload")
+        stage("choice")
         {
             steps{
-                echo "package & upload the code"
+                script{
+                    if(Role == 'devopsEngineer')
+                    {
+                        echo "Select the company $Company"
+                    }
+                }
+                echo "choice $Company"
+            }
+        }
+        stage('file')
+        {
+            steps{
+                echo "file uploaded $File"
+            }
+        }
+        stage('password')
+        {
+            steps{
+                echo "password entered secret $Password"
+            }
+        }
+        stage('booleanParam')
+        {
+            steps{
+                script{
+                    if(Toggle)
+                    {
+                          echo "boolen value $Toggle"
+                    }
+                    else
+                    {
+                         echo "boolen value $Toggle"
+                    }
+
+                }
+              
             }
         }
     }
