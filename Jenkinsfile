@@ -15,37 +15,37 @@ pipeline
         stage('String')
         {
             steps{
-                echo "building the code"
+                echo "String $NAME"
             }
         }
         stage('text')
         {
             steps{
-                echo "testing the code"
+                echo "Text $Role"
             }
         }
         stage("choice")
         {
             steps{
-                echo "package & upload the code"
+                echo "choice $Company"
             }
         }
         stage('file')
         {
             steps{
-                echo "file uploaded"
+                echo "file uploaded $File"
             }
         }
         stage('password')
         {
             steps{
-                echo "password entered secret"
+                echo "password entered secret $Password"
             }
         }
         stage('booleanParam')
         {
             steps{
-                echo "boolen value"
+                echo "boolen value $Toggle"
             }
         }
     }
