@@ -10,24 +10,42 @@ pipeline
         booleanParam(name:'Toggle', defaultValue:true, description:'Toggle the Value')
    }
 
-    stages("Testing")
+    stages
     {
-        stage("build")
+        stage('String')
         {
             steps{
                 echo "building the code"
             }
         }
-        stage("test")
+        stage('text')
         {
             steps{
                 echo "testing the code"
             }
         }
-        stage("upload")
+        stage("choice")
         {
             steps{
                 echo "package & upload the code"
+            }
+        }
+        stage('file')
+        {
+            steps{
+                echo "file uploaded"
+            }
+        }
+        stage('password')
+        {
+            steps{
+                echo "password entered secret"
+            }
+        }
+        stage('booleanParam')
+        {
+            steps{
+                echo "boolen value"
             }
         }
     }
