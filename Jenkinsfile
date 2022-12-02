@@ -27,6 +27,12 @@ pipeline
         stage("choice")
         {
             steps{
+                script{
+                    if(Role == 'devopsEngineer')
+                    {
+                        echo "Select the company $Company"
+                    }
+                }
                 echo "choice $Company"
             }
         }
@@ -45,7 +51,18 @@ pipeline
         stage('booleanParam')
         {
             steps{
-                echo "boolen value $Toggle"
+                script{
+                    if(Toggle)
+                    {
+                          echo "boolen value $Toggle"
+                    }
+                    else
+                    {
+                         echo "boolen value $Toggle"
+                    }
+
+                }
+              
             }
         }
     }
