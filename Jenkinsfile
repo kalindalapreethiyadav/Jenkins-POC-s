@@ -1,6 +1,11 @@
 pipeline
 {
     agent any
+    environment {
+        Project = "preethi.com"
+        Env = "Production"
+    }
+    
     stages("Testing")
     {
         stage("build")
